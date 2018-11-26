@@ -9,11 +9,13 @@ import datetime
 
 InFile = input("File names from eSlideManager:")
 myDestination = input("Your Drive and folder name to save data: ")
+# need an input for Disk and location info for source files
 
 #pathToDatefolderOnSource = input("mySource/images/" ), including disk volume. 
 
 srcFiles = []
 DestList = [] 
+
 ts = time.time()
 TimeNow = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
 print("Time now is: ", TimeNow)
