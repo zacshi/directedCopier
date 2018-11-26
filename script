@@ -54,4 +54,4 @@ print(str(fileCopied) + " files copied")
 ## showing user clock time elapsed
 timeEnd = time.time()
 timeUsed = timeEnd - timeStart
-print("Time used: " + "%6.4F" %timeUsed + " seconds")
+print("Time used: " + "%20.4F" %timeUsed + " seconds")
