@@ -7,15 +7,13 @@ import time
 import datetime
 
 
-InFile = input("File names from eSlideManager:")
+InFile = input("File names from eSlideManager: ")
 myDestination = input("Your Drive and folder name to save data: ")
-# need an input for Disk and location info for source files
-
-#pathToDatefolderOnSource = input("mySource/images/" ), including disk volume. 
+#DiskVolume = input()
+#pathToDatefolderOnSource = "mySource/images/" )
 
 srcFiles = []
 DestList = [] 
-
 ts = time.time()
 TimeNow = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
 print("Time now is: ", TimeNow)
@@ -34,26 +32,25 @@ for Line in fileHandle:
        DestList.append(myDestination + "/" + immediateFolder+"/")
     lineNum += 1
 fileHandle.close()
-print("You have " + str(len(srcFiles)) + " files to copy")
 
 # create destination dirs and make that into a list
 for i in DestList: 
     newDir =  i
     if not os.path.exists(newDir):
          os.makedirs(newDir)
-
-
     
 ##### copying 
 fileCopied = 0
 for i in range(0, len(srcFiles)):
     shutil.copy(srcFiles[i], DestList[i])
     fileCopied += 1
-########
-print(str(fileCopied) + " files copied")
+    print("Action is ongoing, " + str(fileCopied) + " files copied so far")
+print("You have " + str(len(srcFiles)) + " files to copy")
+print("In total, " + str(fileCopied) + " files copied for you")
 
 ########
 ## showing user clock time elapsed
 timeEnd = time.time()
 timeUsed = timeEnd - timeStart
-print("Time used: " + "%20.4F" %timeUsed + " seconds")
+print("Time used: " + "%10.4F" %timeUsed + " seconds")
+
