@@ -1,8 +1,47 @@
 #!/usr/bin/env python
+InFile = input("Files on eSlideManager:")
+myDestination = input("Which folder is your destination: ")
+
+srcFiles = []
+DestList = [] 
+
+##
 import time
 import datetime
-ts = time.time()
-print(ts)
-
 TimeNow = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-print(TimeNow)
+print("Time now is: ", TimeNow)
+timeStart = time.time()
+
+##
+
+###
+fileHandle = open(InFile, "r")
+lineNum = 0
+for Line in fileHandle: 
+    Line = Line.strip('\n')
+    if lineNum > 0: 
+       immediateFolder = Line.split("\\")[-2]
+       fileName = Line.split("\\")[-1].strip('",')
+       srcFiles.append("mySource/images/" + immediateFolder +"/"+fileName)
+       DestList.append(myDestination + "/" + immediateFolder+"/")
+    lineNum += 1
+fileHandle.close()
+print("You have " + lineNum + " files to copy")
+
+# create destination dirs and make that into a list
+for i in DestList: 
+    newDir =  i
+    if not os.path.exists(newDir):
+         os.makedirs(newDir)
+
+##### copying 
+for i in range(0, len(srcFiles)):
+    shutil.copy(srcFiles[i], DestList[i])
+########
+
+## showing user clock time elapsed
+timeEnd = time.time()
+timeUsed = timeEnd - timeStart
+print("Time used: " + timeUsed + " seconds")
+
+
