@@ -28,7 +28,7 @@ for Line in fileHandle:
     if lineNum > 0: 
        immediateFolder = Line.split("\\")[-2]
        fileName = Line.split("\\")[-1].strip('",')
-       srcFiles.append("mySource/images/" + immediateFolder +"/"+fileName)
+       srcFiles.append("G:/AperioBackup/" + immediateFolder +"/"+fileName)
        DestList.append(myDestination + "/" + immediateFolder+"/")
     lineNum += 1
 fileHandle.close()
