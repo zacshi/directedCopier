@@ -9,8 +9,11 @@ import datetime
 
 InFile = input("File names from eSlideManager: ")
 myDestination = input("Your Drive and folder name to save data: ")
+
+pathToDatefolderOnSource = "G:/AperioBackup/" 
+
 #DiskVolume = input()
-#pathToDatefolderOnSource = "mySource/images/" )
+
 
 srcFiles = []
 DestList = [] 
