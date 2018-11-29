@@ -11,20 +11,21 @@ InFile = input("File names from eSlideManager: ")
 myDestination = input("Your Drive and folder name to save data: ")
 
 pathToDatefolderOnSource = "G:/AperioBackup/" 
-
 #DiskVolume = input()
 
-
-srcFiles = []
-DestList = [] 
 ts = time.time()
 TimeNow = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
 print("Time now is: ", TimeNow)
 timeStart = time.time()
 
-
-
-fileHandle = open(InFile, "r")
+srcFiles = []
+DestList = [] 
+try:
+    fileHandle = open(InFile, "r")
+except:
+    print("File can't be opened: ", InFile)
+    quit()
+    
 lineNum = 0
 for Line in fileHandle: 
     Line = Line.strip('\n')
@@ -47,7 +48,8 @@ fileCopied = 0
 for i in range(0, len(srcFiles)):
     shutil.copy(srcFiles[i], DestList[i])
     fileCopied += 1
-    print("Action is ongoing, " + str(fileCopied) + " files copied so far")
+    if fileCopied % 10 == 0:
+      print("Action is ongoing, " + str(fileCopied) + " files copied so far")
 print("You have " + str(len(srcFiles)) + " files to copy")
 print("In total, " + str(fileCopied) + " files copied for you")
 
