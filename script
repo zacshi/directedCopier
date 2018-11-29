@@ -9,9 +9,7 @@ import datetime
 
 InFile = input("File names from eSlideManager: ")
 myDestination = input("Your Drive and folder name to save data: ")
-
-pathToDatefolderOnSource = "G:/AperioBackup/" 
-#DiskVolume = input()
+folderOnSeagateA214 = "G:/AperioBackup/" 
 
 ts = time.time()
 TimeNow = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
@@ -32,7 +30,7 @@ for Line in fileHandle:
     if lineNum > 0: 
        immediateFolder = Line.split("\\")[-2]
        fileName = Line.split("\\")[-1].strip('",')
-       srcFiles.append("G:/AperioBackup/" + immediateFolder +"/"+fileName)
+       srcFiles.append(folderOnSeagateA214 + immediateFolder +"/"+fileName)
        DestList.append(myDestination + "/" + immediateFolder+"/")
     lineNum += 1
 fileHandle.close()
