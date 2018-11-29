@@ -49,7 +49,7 @@ for i in range(0, len(srcFiles)):
     shutil.copy(srcFiles[i], DestList[i])
     fileCopied += 1
     if fileCopied % 10 == 0:
-      print("Action is ongoing, " + str(fileCopied) + " files copied so far")
+      print("Backup is ongoing, " + str(fileCopied) + " files copied so far")
 print("You have " + str(len(srcFiles)) + " files to copy")
 print("In total, " + str(fileCopied) + " files copied for you")
 
