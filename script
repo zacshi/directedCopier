@@ -43,6 +43,7 @@ for i in DestList:
     
 ##### copying 
 fileCopied = 0
+print("Copying...")
 for i in range(0, len(srcFiles)):
     shutil.copy(srcFiles[i], DestList[i])
     fileCopied += 1
