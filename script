@@ -2,10 +2,10 @@
 
 import os, errno, shutil, time, datetime
 
-InFile = input("File names from eSlideManager: ")
+InFile = input("The csv file name exported from eSlideManager: ")
 myDestination = input("Your Drive and folder name to save data: ")
 
-#the following variable may change depending the attachment of our external AperioBackup disk
+#the following variable may change depending on the attachment of our external AperioBackup disk
 #which is sitting on top of the Aperio CS ScanScope computer 
 folderOnSeagateA214 = "G:/AperioBackup/" 
 
