@@ -1,14 +1,12 @@
 #!/usr/bin/env python
 
-import os
-import errno
-import shutil
-import time
-import datetime
-
+import os, errno, shutil, time, datetime
 
 InFile = input("File names from eSlideManager: ")
 myDestination = input("Your Drive and folder name to save data: ")
+
+#the following variable may change depending the attachment of our external AperioBackup disk
+#which is sitting on top of the Aperio CS ScanScope computer 
 folderOnSeagateA214 = "G:/AperioBackup/" 
 
 ts = time.time()
@@ -35,7 +33,7 @@ for Line in fileHandle:
     lineNum += 1
 fileHandle.close()
 
-# create destination dirs and make that into a list
+##### create destination dirs and make into a list
 for i in DestList: 
     newDir =  i
     if not os.path.exists(newDir):
@@ -52,9 +50,9 @@ for i in range(0, len(srcFiles)):
 print("You have " + str(len(srcFiles)) + " files to copy")
 print("In total, " + str(fileCopied) + " files copied for you")
 
-########
-## showing user clock time elapsed
+##### showing user clock time elapsed
 timeEnd = time.time()
 timeUsed = timeEnd - timeStart
 print("Time used: " + "%10.4F" %timeUsed + " seconds")
 
+#### the end
