@@ -11,4 +11,5 @@ Even though eSlide manager has no way to export images in batch, but its data ex
  
  
  How to set up your destination
+ Disk num
 
