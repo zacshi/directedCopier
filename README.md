@@ -6,7 +6,7 @@ Even though eSlide manager has no way to export images in batch, but its data ex
  of YYYY-MM-DD to designated new directory but maintaining the origal date directoreis. 
  
  
- How to export the names of your files and their locations
+ How to export the names of your files and their locations: get rid of empty id in your data group!
  
  
  How to set up your destination
