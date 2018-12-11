@@ -7,7 +7,11 @@ Even though eSlide manager has no way to export images in batch, but its data ex
  
  
  How to export the names of your files and their locations: 
- First get rid of empty id in your data group! Otherwise these may cause confusion. 
+ 1) Open eSlide manager
+ 2) Use advanced search function and proper combination of searching terms to find all the eSlides that you like to back up. 
+ 3) Get rid of empty id in your data group! 
+ 4) Export only the id and location as a csv file (default). 
+ 
  
  
  How to set up your destination
