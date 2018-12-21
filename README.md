@@ -1,4 +1,4 @@
-# directedCopier 
+# DirectedCopier 
 
 Aperio eSlide manager is a great tool to manage scanned slides, which could be grouped into specimens and projects. On the top, users have accessed to different data group. However it doesn't provide direct method to copy or back up the raw image files. Probably, by design, that is a feature or use case the designer of eSlide manager doesn't encourage since it's supposed to be centraized repository of all raw data. Backup happens at the repository, not a concern for individual users. But our users at the core facility have to back up their images or they would like to do so. 
 
