@@ -7,7 +7,7 @@ myDestination = input("Your Drive and folder name to save data: ")
 
 #the following variable may change depending on the attachment of our external AperioBackup disk
 #which is sitting on top of the Aperio CS ScanScope computer 
-folderOnSeagateA214 = "G:/AperioBackup/" 
+folderOnSeagateA214 = "H:/AperioBackup/" 
 
 ts = time.time()
 TimeNow = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
