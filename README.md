@@ -8,7 +8,8 @@ Even though eSlide manager has no way to export images in batch, but its data ex
  1) Open eSlide manager
  2) Use advanced search function and proper combination of searching terms to find all the eSlides that you like to back up. 
  3) Get rid of empty id in your data group! 
- 4) Export only the id and location as a csv file (default). 
- 
+ 4) Export only the id and location as a csv file (default) and save it locally on the workstation.  
+ 5) Run the script via Jupyter. 
+ 6) Provide source image file location (the csv file) and target disk and path. 
 
 
